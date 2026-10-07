@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pankaj Kumar • GitHub Dashboard</title>
+  <meta name="description" content="Pankaj Kumar's modern GitHub-style developer dashboard.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="https://github.com/psthakur9047" target="_blank" rel="noopener">
+        <span class="github-mark">◉</span><span>GitHub</span>
+      </a>
+      <div class="search"><span>⌕</span><input id="searchInput" placeholder="Search repositories..." aria-label="Search repositories"></div>
+      <nav class="topnav">
+        <a href="#home">Dashboard</a>
+        <a href="#repos">Repositories</a>
+        <a href="#activity">Activity</a>
+        <a href="#connect">Connect</a>
+      </nav>
+      <div class="top-actions">
+        <button id="themeBtn" title="Toggle theme">☾</button>
+        <a href="https://github.com/psthakur9047" target="_blank" rel="noopener" class="avatar"><img id="avatarTop" alt="Pankaj Kumar"></a>
+      </div>
+    </header>
+
+    <main class="layout" id="home">
+      <aside class="sidebar">
+        <section class="profile-card card">
+          <img id="avatar" class="avatar-large" alt="Pankaj Kumar">
+          <h2 id="name">Pankaj Kumar</h2>
+          <div class="handle">@psthakur9047</div>
+          <span class="badge">Developer</span>
+          <p id="bio">Software Engineer • AI & Python Developer • Web Developer • MCA Student</p>
+          <a class="edit-btn" href="https://github.com/settings/profile" target="_blank" rel="noopener">Edit profile ↗</a>
+          <div class="stats">
+            <span><b id="repoCount">—</b><small>Repositories</small></span>
+            <span><b id="followers">—</b><small>Followers</small></span>
+            <span><b id="following">—</b><small>Following</small></span>
+          </div>
+        </section>
+
+        <nav class="side-nav card">
+          <a class="active" href="#home">⌂ <span>Home</span></a>
+          <a href="#activity">◌ <span>Activity</span></a>
+          <a href="#repos">▣ <span>Repositories</span></a>
+          <a href="#projects">◆ <span>Projects</span></a>
+          <a href="#connect">◎ <span>Connect</span></a>
+        </nav>
+
+        <section class="card quick-links">
+          <h3>Quick links</h3>
+          <a href="https://github.com/psthakur9047/github-id-card-generator" target="_blank" rel="noopener">ID Card Generator ↗</a>
+          <a href="https://psthakur9047.github.io/github-id-card-generator/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://www.youtube.com/@psvlogs0869" target="_blank" rel="noopener">YouTube ↗</a>
+          <a href="https://www.instagram.com/psthakur9047/" target="_blank" rel="noopener">Instagram ↗</a>
+        </section>
+      </aside>
+
+      <section class="content">
+        <section class="hero card">
+          <div>
+            <div class="eyebrow">DEVELOPER DASHBOARD</div>
+            <h1>Good evening, <span>psthakur9047</span>! 👋</h1>
+            <p>Welcome to Pankaj Kumar's personal GitHub workspace — projects, code, experiments and learning in one place.</p>
+            <div class="hero-actions">
+              <a class="primary" href="https://github.com/new" target="_blank" rel="noopener">＋ New repository</a>
+              <a href="https://github.com/psthakur9047?tab=repositories" target="_blank" rel="noopener">View GitHub →</a>
+            </div>
+          </div>
+          <div class="hero-orbit"><div class="orbit"></div><div class="planet">⌘</div></div>
+        </section>
+
+        <section class="copilot card">
+          <div class="section-title"><span class="spark">✦</span><div><h2>AI Developer Workspace</h2><p>Quick actions for your coding workflow</p></div></div>
+          <div class="prompt"><span>⌕</span><span class="placeholder">Ask about your code, project or next idea...</span><span class="kbd">⌘ K</span></div>
+          <div class="quick-grid">
+            <button>Explain this code</button><button>Fix this bug</button><button>Improve performance</button><button>Write a README</button>
+          </div>
+        </section>
+
+        <section id="repos" class="section">
+          <div class="section-heading"><div><h2>Repositories</h2><p>Live public repositories from GitHub</p></div><a href="https://github.com/psthakur9047?tab=repositories" target="_blank" rel="noopener">View all →</a></div>
+          <div id="repoGrid" class="repo-grid"><div class="loading">Loading repositories...</div></div>
+        </section>
+
+        <section id="projects" class="featured card">
+          <div class="section-heading"><div><h2>Featured Project</h2><p>A project currently worth highlighting</p></div></div>
+          <div class="featured-project">
+            <div class="project-icon">ID</div>
+            <div class="project-main">
+              <h3>GitHub ID Card Generator</h3>
+              <p>A simple responsive web application built with HTML, CSS and JavaScript for generating a downloadable student ID card.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+              <div class="project-actions">
+                <a class="primary small" href="https://psthakur9047.github.io/github-id-card-generator/" target="_blank" rel="noopener">Live Demo ↗</a>
+                <a class="small" href="https://github.com/psthakur9047/github-id-card-generator" target="_blank" rel="noopener">Source ↗</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="activity" class="section">
+          <div class="section-heading"><div><h2>GitHub Overview</h2><p>Public profile statistics</p></div></div>
+          <div class="metrics">
+            <div class="metric card"><span>Repositories</span><b id="mRepos">—</b></div>
+            <div class="metric card"><span>Followers</span><b id="mFollowers">—</b></div>
+            <div class="metric card"><span>Following</span><b id="mFollowing">—</b></div>
+            <div class="metric card"><span>Public Gists</span><b id="mGists">—</b></div>
+          </div>
+        </section>
+
+        <section id="connect" class="connect card">
+          <div><div class="eyebrow">LET'S CONNECT</div><h2>Build • Learn • Share • Grow</h2><p>Find me around the web.</p></div>
+          <div class="socials">
+            <a href="https://github.com/psthakur9047" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.instagram.com/psthakur9047/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.youtube.com/@psvlogs0869" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </section>
+
+        <footer>© <span id="year"></span> Pankaj Kumar • Built with HTML, CSS & JavaScript • Powered by GitHub Pages</footer>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
